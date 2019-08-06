@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Responsive Form2</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <style>
+      body {
+         text-align: center;
+         background-image: url(https://cdn.pixabay.com/photo/2017/08/12/10/13/background-2633962_960_720.jpg)
+      }
+
+      h1 {
+         margin-bottom: 0;
+      }
+
+      input[type=text],
+      input[type=password] {
+         width: 100%;
+         padding: 12px 20px;
+         margin: 8px 0;
+         display: inline-block;
+         border: 2px solid #000;
+         box-sizing: border-box;
+         border-radius: 25px;
+         background: lightpink;
+         box-sizing: border-box;
+      }
+
+      button {
+         background-color: lightpink;
+         color: white;
+         padding: 15px 20px;
+         margin: 8px 0;
+         cursor: pointer;
+         width: 50%;
+         border-radius: 25px;
+         border: 2px solid #000;
+      }
+
+      .style {
+         border: 5px solid #000;
+         border-radius: 25px;
+         display: inline-block;
+         margin: 0 30%;
+         margin-top: 10%
+      }
+
+      .Sign-Up {
+         text-align: center;
+      }
+
+      .btn {
+         padding: 15px 20px;
+         width: 40%;
+         cursor: pointer;
+      }
+
+      .container {
+         padding: 16px;
+
+      }
+   </style>
+</head>
+<body>
+   <form action="/action_page.php" class="style">
+      <h1>Sign-Up</h1>
+      <div class="container">
+         <div class="InputWithIcon">
+            <input type="text" placeholder="Enter Email" name="email" required>
+         </div>
+         <input type="password" placeholder="Enter Password" name="psw" required>
+         <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+         <input type="checkbox" checked="checked"> Remember me
+         <p>To create an account you have to agree our <a href="#">Terms & Privacy</a>.</p>
+         <div class="Sign-Up">
+            <button type="button" class="btn">Sign Up</button>
+         </div>
+      </div>
+   </form>
+
+</body>
+
+</html>
