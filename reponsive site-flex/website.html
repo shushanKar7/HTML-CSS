@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="main">
-            <header style="background-image:url('slide1.jpg');height: 892px ;">
+            <header style="background-image:url('header.jpg');height: 892px ;">
                 <div class="icons">
                     <a href="#" class="fa fa-facebook"></a>
                     <a href="#" class="fa fa-twitter"></a>
@@ -28,14 +28,18 @@
                         <li>
                             <h1>FLEX</h1>
                         </li>
-                        <ul class="menue" style="padding-left: 10%;"></ul>
-                        <li style="color: #ec523f;">HOME</li>
+                        <ul class="topnav" style="padding-left: 10%;" id="myTopnav"></ul>
+                        <li><a href="#home" class="active"> HOME</a></li>
                         <li><a href="#service">SERVICES</a></li>
                         <li><a href="#portfolio">PORTFOLIO</a></li>
                         <li><a href="#team">TEAM</a></li>
                         <li><a href="#team">EXTERNAL</a></li>
                         <li><a href="#team">CONTACT</a></li>
-                        ​
+                        <li> <a href="javascript:void(0);" class="iconn" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                            </a></li>
+                    </ul>
+                    ​
                     </ul>
                     ​
                 </nav>
@@ -208,6 +212,16 @@
     ​
     ​
     </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
     ​
 </body>
 ​
