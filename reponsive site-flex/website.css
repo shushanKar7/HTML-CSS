@@ -195,68 +195,64 @@ h2 {
 }
 
 .boxes .fa {
-    display: inline-block;
+    display: flex;
+    margin: auto;
     line-height: 1;
     color: white;
     font-size: 40px;
+    text-align: center;
+    transform: translateY(250%)
 
 }
 
 .boxes {
-    width: 100%;
+    width: 80%;
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-flow: wrap;
     margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: center;
 
 }
 
 #boxflex {
-    width: 20%;
-    height: 300px;
-    margin: 20px;
+    
+    width: 250px;;
+    height: 250px;
+    /* margin: 20px; */
     text-align: center;
 
 }
 
 .box1 {
     background-color: #1abc9c;
-    margin-left: 1.5%;
+    
 
 }
 
 .box2 {
     background-color: #e67f22;
-
-    margin-left: 1.5%;
 }
 
 .box3 {
     background-color: #3598db;
 
-    margin-left: 1.5%;
 }
 
 .box4 {
     background-color: #2dcc72;
 
-    margin-left: 1.5%;
 }
 
-@media only screen and (max-width: 1200px) {
-    #boxflex {
-        width: 40%;
+ @media only screen and (max-width: 802px) {
+    .box1,.box2,.box3,.box4 {
+        margin-top:4%;
     }
-}
-
-@media only screen and (max-width: 600px) {
-    #boxflex {
-        width: 40%;
-    }
-}
+} 
 
 .heading3 {
     margin-top: 7%;
@@ -271,59 +267,24 @@ h2 {
     margin-top: 0%;
 }
 
-.images:hover .overlay {
-    opacity: 1;
-}
-
-.overlay {
-    position: absolute;
-    left: 7.5%;
-    top: 5.1%;
-    right: 0;
-    bottom: 0%;
-    height: 45%;
-    width: 20%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #ec523f;
-}
-
-.images {
-    position: relative;
-}
-
-.images {
-    margin-top: 1.75%;
+.images{
+    width: 80%;
+    height: auto;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     flex-flow: wrap;
-    justify-content: center;
-    margin: auto;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
 }
 
 .a {
-    width: 20%;
-    height: 300px;
-    margin-left: 1.75%;
+    
+    margin-top: 2%;
+} 
 
-}
-
-.a {
-    margin-left: 2.5%;
-    margin-top: 2.5%;
-}
-
-@media only screen and (max-width: 1200px) {
-    .images {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .a {
-        width: 100%;
-    }
-}
 
 
 .heading4 {
@@ -355,17 +316,6 @@ h2 {
     border-radius: 50%;
 }
 
-@media only screen and (max-width: 1200px) {
-    .roundimages {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .b {
-        width: 100%;
-    }
-}
 
 .heading5 h3 {
     margin-top: 7%;
