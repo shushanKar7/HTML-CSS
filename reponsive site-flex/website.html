@@ -14,46 +14,54 @@
 
 <body>
     <div class="container">
-        <div class="main">
-            <header style="background-image:url('header.jpg');height: 892px ;">
-                <div class="icons">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-dribbble"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
+            <div class="main" id="home">
+                    <div class="new icons" style="display:none">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-dribbble"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                    </div>
+                    <header style="background-image:url('slide1.jpg');">
+                        <div class="icons">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                            <a href="#" class="fa fa-dribbble"></a>
+                            <a href="#" class="fa fa-linkedin"></a>
+                        </div>
+                       
+                        <nav>
+                            <div class="navigation">
+                                <ul id="firstUnorderedList">
+                                    <li style="background-image: url('logo.jpg');" class="newLogo"></li>
+                                    <li id="flex" class="newHeading">FLEX</li>
+                                    <button onclick="change();"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                                </ul>
+                                <ul class="column">
+                                    <a href="#home">HOME</a>
+                                    <a href="#services">SERVICES</a>
+                                    <a href="#portfolio">PORTFOLIO</a>
+                                    <a href="#team">TEAM</a>
+                                    <a href="#external">EXTERNAL</a>
+                                    <a href="#contact">CONTACT</a>
+                                </ul>
+                                <ul id="secondUnorderedList">
+                                    <li><a href="#home" style="text-decoration:none; color:#444;">HOME</a></li>
+                                    <li><a href="#services" style="text-decoration:none; color:#444;">SERVICES</a></li>
+                                    <li><a href="#portfolio" style="text-decoration:none; color:#444;">PORTFOLIO</a></li>
+                                    <li><a href="#team" style="text-decoration:none; color:#444;">TEAM</a></li>
+                                    <li><a href="#external" style="text-decoration:none; color:#444;">EXTERNAL</a></li>
+                                    <li><a href="#contact" style="text-decoration:none; color:#444;">CONTACT</a></li>
+                                </ul>
+                            </div>
+                        </nav> 
+                        <div class="info">
+                            <h1 id="DIGITAL">DIGITAL MARKETING</h1>
+                            <hr width="488px" id="hr">
+                            <h3 id="MORE">MORE VISITORS TO YOUR WEBSITE</h3>
+                            <button id="LETUS">LET US YOUR DESIGN</button>
+                        </div>
+                    </header>
                 </div>
-                <nav>
-                    <ul style="width:60%">
-                        <li style="height:100px; margin-left: -7%"><img src="logo.jpg" alt="LOGO"></li>
-                        <li>
-                            <h1>FLEX</h1>
-                        </li>
-                        <ul class="topnav" style="padding-left: 10%;" id="myTopnav"></ul>
-                        <li><a href="#home" class="active"> HOME</a></li>
-                        <li><a href="#service">SERVICES</a></li>
-                        <li><a href="#portfolio">PORTFOLIO</a></li>
-                        <li><a href="#team">TEAM</a></li>
-                        <li><a href="#team">EXTERNAL</a></li>
-                        <li><a href="#team">CONTACT</a></li>
-                        <li> <a href="javascript:void(0);" class="iconn" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                            </a></li>
-                    </ul>
-                    ​
-                    </ul>
-                    ​
-                </nav>
-                <div class="info">
-                    <h1>DIGITAL MARKETING</h1>
-                </div>
-                <div class="info">
-                    <p>MORE VISITORS TO YOUR WEBSITE </p>
-                </div>
-                <div class="info">
-                    <button>LET US DESIGN</button>
-                </div>
-        </div>
-        ​ </header>
         <div class="circles">
             <a href="#"><i class="fa fa-circle"></i></a>
             <a href="#"> <i class="fa fa-circle"></i></a>
@@ -205,17 +213,81 @@
     ​
     ​
     </div>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
+<script>
+            let header = document.getElementsByTagName("header"),
+                info = document.getElementsByClassName("info"),
+                hoverHeading = document.getElementById("hoverHeading"),
+                hoverHeading3 = document.getElementById("hoverHeading3"),
+                secondHoverHeading = document.getElementById("secondHoverHeading"),
+                secondHoverHeading3 = document.getElementById("secondHoverHeading3"),
+                thirdHoverHeading = document.getElementById("thirdHoverHeading"),
+                digital = document.getElementById("DIGITAL"),
+                hr = document.getElementById("hr"),
+                more = document.getElementById("MORE"),
+                letus = document.getElementById("LETUS"),
+                thirdHoverHeading3 = document.getElementById("thirdHoverHeading3"),
+                hoverImg = document.getElementsByClassName("img"),
+                newLogo = document.getElementsByClassName("newLogo"),
+                hoverIcons = document.getElementsByClassName("hoverIcons"),
+                secondPage = document.getElementsByClassName("secondPage"),
+                center = document.getElementsByClassName("center"),
+                squares = document.getElementsByClassName("hard"),
+                nav = document.getElementsByTagName("nav"),
+                child1 = document.getElementsByClassName("child1"),
+                child2 = document.getElementsByClassName("child2"),
+                navigation = document.getElementsByClassName("navigation"),
+                img = document.getElementsByTagName("img"),
+                iconMenu = document.getElementsByClassName("fa-bars"),
+                column = document.getElementsByClassName("column"),
+                codeIcon = document.getElementById("code"),
+                planeIcon = document.getElementById("plane"),
+                bankIcon = document.getElementById("bank"),
+                flaskIcon = document.getElementById("flask"),
+                ful = document.getElementById("firstUnorderedList");
+            setInterval(() => {
+                header[0].style.height = (header[0].offsetWidth) / 2.16 + "px";
+                if (window.innerWidth <= 1140 && window.innerWidth > 1000) {
+                    nav[0].style.marginLeft = "5%";
+                    nav[0].style.width = "90%";
+                }
+                if (window.innerWidth <= 1010) {
+                    ful.firstChild = "newLogo";
+                }
+                if (window.innerWidth <= 1200) {
+                    for (var i = 0; i < img.length; i++) {
+                        img[i].height = img[i].width;
+                    }
+                }
+                if (window.innerWidth < 1800) {
+                    for (let i = 0; i < hoverImg.length; i++) {
+                        hoverImg[i].style.height = hoverImg[i].offsetWidth + "px";
+                    }
+                }
+                if((getComputedStyle(header[0]).backgroundImage).search('slide1.jpg') != -1){
+                                digital.textContent = "DIGITAL MARKETING";
+                                hr.style.width = "488px";
+                                more.textContent = "MORE VISITORS TO YOUR WEBSITE";
+                                letus.textContent = "LET US YOUR DESIGN";
+                } else if((getComputedStyle(header[0]).backgroundImage).search('slide2.jpg') != -1){
+                                digital.textContent = "RESPONSIVE HTML CSS";
+                                hr.style.width = "600px";
+                                more.textContent = "DOWNLOAD AND USE IT FOR YOUR SITE";
+                                letus.textContent = "GO TO PORTFOLIO";
+                }
+            }, 10);
+            const change = () => {
+                if ((getComputedStyle(column[0])).display === "none") {
+                    nav[0].style.height = "300px";
+                    navigation[0].style.height = "100%";
+                    column[0].style.display = "block";
+                    column[0].style.height = "100%";
+                } else {
+                    column[0].style.display = "none";
+                    nav[0].style.height = "50px";
+                }
             }
-        }
-    </script>
-    ​
+            
+        </script>   ​ 
 </body>
 ​
 

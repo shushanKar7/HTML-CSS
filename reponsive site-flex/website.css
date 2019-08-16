@@ -2,7 +2,7 @@ html,
 body,
 .container {
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -17,64 +17,28 @@ body,
 
 header {
     width: 100%;
-    background-size: cover;
+    background-size: 100% 100%;
+    animation: myFirstAnimation 6s infinite;
 }
 
-li a {
-    color: #444;
-}
-
-li a.active {
-    color: #ec523f;
-
-}
-
-li a:hover {
-    color: #ec523f;
-}
-
-li .iconn {
-    display: none;
-    background-color: #ec523f;
-
-    color: white;
-}
-
-@media screen and (max-width: 1000px) {
-    li a {
-        display: none;
+@keyframes myFirstAnimation {
+    0% {
+        background-image: url(slide1.jpg);
     }
 
-    li a.iconn {
-        float: right;
-        display: block;
+    50% {
+        background-image: url(slide2.jpg);
+    }
+
+    100% {
+        background-image: url(slide3.jpg);
     }
 }
-
-@media screen and (max-width: 1000px) {
-    li.responsive {
-        position: relative;
-    }
-
-    li.responsive a.iconn {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    li.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
-
 
 .icons {
     display: flex;
     justify-content: center;
 }
-
 
 .fa {
     width: 36px;
@@ -85,7 +49,8 @@ li .iconn {
     display: flex;
     justify-content: center;
     line-height: 36px;
-    margin: 15px 5px;
+    margin: 30px 5px;
+    font-size: 12.5px;
 }
 
 .fa:hover {
@@ -100,37 +65,116 @@ li .iconn {
     color: #444;
 }
 
-li {
-    display: inline-block;
-    list-style-type: none;
+nav {
+    display: flex;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
 }
 
 ul {
-    background-color: #fff;
-    padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10%;
-}
-
-ul li {
-    font-size: 14px;
-    color: #444;
-}
-
-ul li h1 {
+    display: inline-block;
     margin: 0;
-    color: #ec523f;
-    line-height: 100px;
-    font-size: 32px;
-    font-weight: 700;
+    padding: 0;
+    height: 100px;
+}
+
+li {
+    display: inline-block;
+    color: #444444;
+}
+
+.newLogo {
+    width: 100px;
+    height: 100px;
+}
+
+.navigation:first-child:last-child {
     overflow: hidden;
+    line-height: 100px;
+}
+
+#flex {
+    color: #ec523f;
+    font-size: 32px;
+    overflow: hidden;
+    line-height: 100px;
+    font-weight: 700;
+    padding-left: 30px;
+}
+
+#firstUnorderedList {
+    width: 30%;
+}
+
+#secondUnorderedList {
+    display: flex;
+    list-style-type: none;
+    width: 80%;
+    text-align: right;
+}
+
+#secondUnorderedList li {
+    margin: 0 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#secondUnorderedList:last-child {
+    margin-right: 35px;
+}
+
+.info {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 12.5%;
+}
+
+.column {
+    display: none;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.info h1 {
+    margin: 0;
+}
+
+/* #firstUnorderedList button{
+     display: none;
+ } */
+.fa-bars {
+    display: none;
+}
+
+.column a {
+    text-decoration: none;
+    color: #444;
+    display: block;
+    width: 45px;
+    height: 20px;
+    margin: 10px;
+}
+
+.info button {
+    width: 200px;
+    padding: 10px 0;
+    background-color: #ec523f;
+    border: 0;
+    border-radius: 4px;
+    align-self: center;
 }
 
 h1 {
@@ -202,7 +246,6 @@ h2 {
     font-size: 40px;
     text-align: center;
     transform: translateY(250%)
-
 }
 
 .boxes {
@@ -216,21 +259,19 @@ h2 {
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
-
 }
 
 #boxflex {
-    
-    width: 250px;;
+
+    width: 250px;
+    ;
     height: 250px;
     /* margin: 20px; */
     text-align: center;
-
 }
 
 .box1 {
     background-color: #1abc9c;
-    
 
 }
 
@@ -240,19 +281,21 @@ h2 {
 
 .box3 {
     background-color: #3598db;
-
 }
 
 .box4 {
     background-color: #2dcc72;
-
 }
 
- @media only screen and (max-width: 802px) {
-    .box1,.box2,.box3,.box4 {
-        margin-top:4%;
+@media only screen and (max-width: 802px) {
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+        margin-top: 4%;
     }
-} 
+}
 
 .heading3 {
     margin-top: 7%;
@@ -267,25 +310,23 @@ h2 {
     margin-top: 0%;
 }
 
-.images{
-    width: 80%;
+.images {
+    width: 65%;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-flow: wrap;
     margin-top: 3%;
-    margin-left: 10%;
-    margin-right: 10%;
-    
+    margin-left: 18%;
+    margin-right: 0%;
+
 }
 
 .a {
-    
+
     margin-top: 2%;
-} 
-
-
+}
 
 .heading4 {
     margin-top: 7%;
@@ -307,7 +348,6 @@ h2 {
     flex-flow: wrap;
     justify-content: center;
     margin: auto;
-
 }
 
 .b {
@@ -315,7 +355,6 @@ h2 {
     margin-top: 2.5%;
     border-radius: 50%;
 }
-
 
 .heading5 h3 {
     margin-top: 7%;
@@ -358,16 +397,67 @@ h2 {
 .textright {
     float: right;
     width: 30%;
-
 }
 
 .bars {
+    width: 80%;
     flex-direction: column;
     list-style: none;
     color: #666666;
     text-rendering: optimizeLegibility;
-
 }
+
+@media only screen and (max-width:860px) {
+    .heading6 {
+        display: block;
+    }
+
+    .par {
+        display: block;
+        width: 300%;
+    }
+
+    .bars {
+        position: relative;
+        left: -234%;
+        width: 300%;
+
+    }
+
+    .heading7 {
+
+        margin-top: 30%;
+    }
+
+    .par2 {
+        display: block;
+        width: 100%;
+    }
+
+    .textrightt {
+        position: relative;
+        left: -60%;
+        width: 250%;
+    }
+
+    #contactform {
+        width: 250%;
+
+    }
+
+    .right {
+        position: relative;
+        bottom: -60%;
+        right: -41%;
+
+    }
+
+    .copyright {
+        position: relative;
+        bottom: -65%;
+    }
+}
+
 
 li {
     width: 100%;
@@ -419,7 +509,7 @@ li {
 }
 
 .heading7 {
-    margin-top: 9%;
+    /* margin-top: 9%; */
     text-align: center;
     width: 100%;
 }
@@ -436,8 +526,6 @@ li {
     height: auto;
     display: flex;
     margin-top: 5%;
-
-
 }
 
 .form {
@@ -446,7 +534,6 @@ li {
     margin: auto;
     width: 60%;
     height: 34px;
-
 }
 
 .footer p {
@@ -459,11 +546,9 @@ li {
 }
 
 .footer {
-
     margin-top: 5%;
     margin-left: 5.5%;
     width: 90%;
-
 }
 
 .blue {
@@ -504,7 +589,6 @@ li {
     width: 100%;
     margin-bottom: 15px;
     cursor: pointer;
-
 }
 
 #contactform textarea {
@@ -521,8 +605,6 @@ li {
 .textrightt {
     width: 41%;
     float: right;
-
-
 }
 
 .form4 {
@@ -531,7 +613,7 @@ li {
 
 .par2 {
     display: inline-block;
-    width: 59%;
+    /* width: 59%; */
 }
 
 .copyright {
@@ -546,9 +628,6 @@ li {
     color: white;
     padding: 15px 40px;
     font-weight: 700;
-
-
-
 }
 
 .right {
@@ -566,5 +645,327 @@ li {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+}
 
+@media only screen and (min-width: 1350px) {
+    .center {
+        margin-left: 5%;
+    }
+
+    .hard {
+        justify-content: center;
+    }
+
+    .someImages {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:1400px) {
+    .images {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+}
+
+@media only screen and (max-width:1200px) {
+    .info {
+        margin-top: 2.5%;
+    }
+
+    nav {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .secondUnorderedList {
+        width: 80%;
+    }
+
+    .center {
+        margin: 0 10%;
+        width: 80%;
+    }
+
+    .hard li {
+        width: 212.5px;
+    }
+
+    .images {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #picture1,
+    #picture2 {
+        margin-left: 0;
+    }
+
+    .img {
+        width: 212.5px;
+        height: 212.5px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .center {
+        margin: 0 2.5%;
+        width: 90%;
+    }
+
+    #code {
+        margin-left: 30px;
+    }
+
+    .fifthPage {
+        margin-top: 200px;
+    }
+
+    .fullCenter {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
+
+@media only screen and (max-width: 866px){
+    #firstUnorderedList button {
+        border-color: #fff;
+        background-color: #fff;
+        border-width: 0;
+        padding: 0;
+        font: 0 Arial;
+        height: 50px;
+        margin-left: 72.5%;
+        margin-top: 22.5px;
+        display: block;
+        position: absolute;
+        right: 10%;
+        top: 15%;
+    }
+
+    }  
+
+
+@media only screen and (max-width: 1010px) {
+    .infoAboutDesign {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info {
+        display: none;
+    }
+
+    #firstUnorderedList button {
+        border-color: #fff;
+        background-color: #fff;
+        border-width: 0;
+        padding: 0;
+        font: 0 Arial;
+        height: 50px;
+        margin-left: 72.5%;
+        margin-top: 22.5px;
+        display: block;
+        position: absolute;
+        top: 14.5%;
+        right: 6%;
+
+    }
+
+    .navigation ul {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        height: 50px;
+        flex-direction: column;
+    }
+
+    #firstUnorderedList {
+        display: flex;
+        width: 100%;
+    }
+
+    .newLogo {
+        position: absolute;
+        bottom: 73.9%;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        justify-self: flex-start;
+        background-size: cover;
+        margin-top: 25px;
+    }
+
+    .newHeading {
+        color: #ec523f;
+        font-size: 32px;
+        overflow: hidden;
+        line-height: 100px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .fa-bars {
+        display: inline-block;
+        background-color: #ec523f;
+        color: #fff;
+        border-radius: 0;
+        margin-top: 7.5px;
+    }
+
+    .column {
+        margin-right: 25px;
+        margin-bottom: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 995px) {
+    .hard {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hard li {
+        width: 345px;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    .img {
+        width: 345px;
+        height: 345px;
+    }
+
+    .someImages {
+        flex-wrap: wrap;
+    }
+
+    #thirdImg {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    #fourthImg {
+        margin-top: 30px;
+    }
+
+    .child1 .imga,
+    .child2 .imga {
+        width: 47%;
+    }
+
+    .child1,
+    .child2 {
+        flex-wrap: wrap;
+    }
+
+    .child1 :nth-child(3) {
+        margin-left: 0;
+        margin-top: 29.5px;
+    }
+
+    #nth4 {
+        margin-top: 29.5px;
+    }
+
+    #nth3 {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    nav {
+        width: 100%;
+        margin: 0 2.5%;
+    }
+
+    .navigation {
+        width: 95%;
+    }
+
+    .fifthPage {
+        margin-top: 300px;
+    }
+
+    .fullCenter {
+        width: 90%;
+        margin: 0 5%;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .someImages {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .hard li {
+        width: 95%;
+    }
+
+    .child1 .imga,
+    .child2 .imga {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5%;
+    }
+
+    .child1,
+    .child2 {
+        width: 100%;
+    }
+
+    .images {
+        width: 95%;
+        margin: 0 2.5%;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    nav {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .information {
+        flex-direction: column;
+    }
+
+    .paragraphs1 {
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .new {
+        display: flex;
+    }
+
+    .someImages {
+        flex-direction: column;
+    }
+
+    .img {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .fifthPage {
+        margin-top: 400px;
+    }
 }
