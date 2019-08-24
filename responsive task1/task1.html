@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="task1.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="header">
+        <nav>
+          <h1>Tasks</h1>
+          <div><i class="fa fa-bars" onclick="myFunc()"></i></div>
+          </nav>
+      </div>
+      <div class="middle">
+        <div class="body" id="toggling">
+          <ul>
+          <div class="task">
+            <div class="circle"><i class="fa"></i></div>
+            <li>Prepare for Session</li>
+          </div>
+          <div class="task">
+            <div class="circle"><i class="fa"></i></div>
+           <li>Assign Tasks</li> 
+          </div>
+          <div class="task">
+            <div class="circle"><i class="fa"></i></div>
+            <li>Be there on time</li>
+          </div>
+          <div class="task">
+              <div class="circle"><i class="fa"></i></div>
+              <li>Start Session</li>
+          </div>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+ <script>
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+function myFunc() {
+ var menu = document.getElementById("toggling");
+ if (menu.style.display === "none") {
+  menu.style.display = "block";
+ } else {
+  menu.style.display = "none";
+   }
+
+}
+</script>
+</html>
