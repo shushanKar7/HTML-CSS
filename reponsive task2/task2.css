@@ -182,4 +182,28 @@ input{
     transition: all 0.2s ease;
     text-decoration: underline;
 }
-
+@media only screen and (max-width: 700px) {
+    .opacity {
+width: 200%;
+height: 50vh;    
+}
+.image{
+    width: 200%;
+    height: 50vh;
+}
+.text-bottom{
+    margin-top: 15%;
+}
+.leftpart{
+    width: 50%;
+    height: 40vh;
+    margin-left: -45%;
+    margin-top:  -35%;
+}
+body{
+    overflow-y: auto;
+}
+h3{
+    margin-top: 169%;
+}
+  }
