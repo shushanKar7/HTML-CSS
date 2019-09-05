@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif'
 }
+.body{
+  width: 100%;
+}
 .container{
 height: 100vh;
 width: 100%;
@@ -105,4 +108,37 @@ ul li.checked::before {
 }
  #toggling{
   position: fixed; 
+ } 
+ .addTasks{
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgb(234, 234, 234);
+  position: relative;
+  margin: 10px auto 0;
+  padding: 10px 0;
+
  }
+ .addTasks input{
+   border: 2px solid rgb(8, 199, 49);
+   padding: 7px 5px;
+ }
+ .addTasks input::placeholder{
+  font-size: 1em;
+  color: rgb(93, 107, 121);
+  cursor: pointer;
+  transition: 0.2s;
+  
+ }
+ .addBtn{
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  padding: 7px 5px;
+  
+ }
+ .addBtn:hover{
+   background-color:rgb(193, 197, 201);
+  
+ }
+ 
+ 

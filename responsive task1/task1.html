@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 ​
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,38 +15,47 @@
   <div class="container">
     <div class="wrapper">
       <div class="header">
-        <nav>
+        <nav id="myul">
           <h1>Tasks</h1>
           <div><i class="fa fa-bars" onclick="myFunc()"></i></div>
           </nav>
       </div>
       <div class="middle">
         <div class="body" id="toggling">
-          <ul>
+          <ul id="myUL">
           <div class="task">
-            <div class="circle"><i class="fa"></i></div>
+            <div class="circle" id="circle"><i class="fa 3 3"></i></div>
             <li>Prepare for Session</li>
           </div>
           <div class="task">
-            <div class="circle"><i class="fa"></i></div>
+            <div class="circle" id="circle"><i class="fa"></i></div>
            <li>Assign Tasks</li> 
           </div>
           <div class="task">
-            <div class="circle"><i class="fa"></i></div>
+            <div class="circle" id="circle"><i class="fa"></i></div>
             <li>Be there on time</li>
           </div>
           <div class="task">
-              <div class="circle"><i class="fa"></i></div>
+              <div class="circle" id="circle"><i class="fa"></i></div>
               <li>Start Session</li>
           </div>
+          
         </ul>
+        <div id="myDIV" class="addTasks">
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn" onclick="newCircle()">Add</span>
+          </div>
+       
         </div>
+            
       </div>
     </div>
   </div>
-</body>
+  </body>
 
  <script>
+  
+
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
@@ -62,5 +72,21 @@ function myFunc() {
    }
 
 }
+
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  
+  }
+
+</script>
+
 </script>
 </html>
